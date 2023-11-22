@@ -188,41 +188,4 @@ namespace UnityEngine.UI
             SetDirty();
         }
 
-        protected override void OnDisable()
-        {
-            SetDirty();
-            base.OnDisable();
-        }
-
-        protected override void OnDidApplyAnimationProperties()
-        {
-            SetDirty();
-        }
-
-        protected override void OnBeforeTransformParentChanged()
-        {
-            SetDirty();
-        }
-
-        /// <summary>
-        /// Mark the LayoutElement as dirty.
-        /// </summary>
-        /// <remarks>
-        /// This will make the auto layout system process this element on the next layout pass. This method should be called by the LayoutElement whenever a change is made that potentially affects the layout.
-        /// </remarks>
-        protected void SetDirty()
-        {
-            if (!IsActive())
-                return;
-            LayoutRebuilder.MarkLayoutForRebuild(transform as RectTransform);
-        }
-
-    #if UNITY_EDITOR
-        protected override void OnValidate()
-        {
-            SetDirty();
-        }
-
-    #endif
-    }
-}
+        protected                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
